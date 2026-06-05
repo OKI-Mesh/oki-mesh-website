@@ -1,0 +1,27 @@
+<header class="sticky top-0 z-30 bg-bg/80 backdrop-blur-md border-b border-(--color-border) font-mono">
+  <div class="max-w-(--maxw) mx-auto px-[clamp(20px,4vw,56px)] flex items-center gap-5 h-14">
+    <a href="/" class="flex items-center gap-2 font-semibold tracking-wide shrink-0">
+      {{ with resources.Get "images/logo-mark.svg" }}
+      <img src="{{ .RelPermalink }}" alt="" style="width:32px;height:32px;display:block;flex-shrink:0;" />
+      {{ end }}
+      {{ site.Title }}
+    </a>
+    <nav class=" flex gap-6 ml-2 text-sm">
+      {{ range site.Menus.main }}
+      <a href="{{ .URL | relURL }}" class="text-muted hover:text-text transition-colors">{{ .Name }}</a>
+      {{ end }}
+    </nav>
+    <span class="flex-1"></span>
+    {{ with site.Params.frequency }}
+    <span class="text-xs text-faint">FREQ <b class="text-signal font-medium">{{ . }}</b></span>
+    {{ end }}
+    <div class="flex items-center gap-2" role="group" aria-label="Color theme">
+      <button type="button"
+        class="w-4 h-4 rounded-full bg-signal border-2 border-transparent aria-pressed:border-text cursor-pointer"
+        data-theme-set="blue" aria-label="Blue theme"></button>
+      <button type="button"
+        class="w-4 h-4 rounded-full bg-[#34e2a4] border-2 border-transparent aria-pressed:border-text cursor-pointer"
+        data-theme-set="green" aria-label="Green theme"></button>
+    </div>
+  </div>
+</header>

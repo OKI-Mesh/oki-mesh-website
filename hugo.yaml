@@ -1,0 +1,62 @@
+baseURL: "https://okimesh.org/"
+title: "OKI Mesh"
+theme: "okimesh-radio"
+enableRobotsTXT: true
+
+params:
+  home:
+    headline_pre: "A radio network the "
+    headline_accent: "whole region carries."
+    band: "910.525 MHz"
+    coordinates: "39.1055° N, 84.8201° W"
+    lede: "OKIMesh is a volunteer-run <b>LoRa mesh</b> across the Southwest Ohio, Southeast Indiana, and Northern Kentucky — messaging that keeps working when the internet and cell network don't. No towers, no servers, no monthly bill."
+    actions:
+      - label: "JOIN →"
+        url: "getting-started/"
+        class: "go"
+      - label: "COVERAGE"
+        url: "https://map.okimesh.org/"
+        class: "alt"
+    states:
+      - name: "Ohio"
+        abbreviation: "OH"
+      - name: "Kentucky"
+        abbreviation: "KY"
+      - name: "Indiana"
+        abbreviation: "IN"
+  description: "Off-grid LoRa mesh network for Greater Cincinnati and the Tri-State (Ohio, Kentucky, Indiana). Powered by MeshCore."
+  region: "Ohio · Kentucky · Indiana"
+  
+  footerTagline: "Built for resilient communications."
+  # ogImage: "img/social-card.jpg"   # drop a 1200x630 image in static/img/
+  favicon: "images/favicon.png"
+
+  joinLabel: "Join the mesh"
+  joinURL: "getting-started/"
+
+  # extraHeadLinks: []  # any extra stylesheet URLs
+
+  # Footer community links (rendered in order)
+  social:
+    - name: "Discord"
+      url: "https://discord.gg/HAvyKm7yP"
+    - name: "GitHub"
+      url: "https://github.com/OKI-Mesh"
+
+# Top navigation
+menus:
+  main:
+  - name: "What is it"
+    url: "/#what"
+    weight: 10
+  - name: "Get started"
+    url: "/getting-started/"
+    weight: 20
+  - name: "Coverage"
+    url: "/coverage/"
+    weight: 30
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true

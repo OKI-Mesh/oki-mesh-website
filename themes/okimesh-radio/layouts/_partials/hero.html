@@ -1,0 +1,39 @@
+<section class="relative min-h-[70vh] flex items-center pt-6">
+    <div class="max-w-(--maxw) mx-auto px-[clamp(20px,4vw,56px)]">
+        <div class="grid grid-cols-2 gap-7 items-center">
+
+            <div>
+                <p class="font-mono text-xs text-faint tracking-[0.14em] mb-5">
+                    {{ .Site.Params.home.coordinates | safeHTML }} ·
+                    {{ delimit (apply .Site.Params.home.states "index" "." "abbreviation") " / " }} ·
+                    {{ .Site.Params.home.band | safeHTML }}
+                </p>
+                <h1 class="text-[clamp(2.5rem,6.4vw,4.9rem)] font-bold leading-[0.98] tracking-tight mb-6">
+                    {{ .Site.Params.home.headline_pre }}
+                    <span class="block text-signal">{{ .Site.Params.home.headline_accent }}</span>
+                </h1>
+                <p class="text-muted text-lg max-w-[50ch] mb-8">{{ .Site.Params.home.lede | safeHTML }}</p>
+                <div class="flex border border-border w-fit">
+                    {{ range .Site.Params.home.actions }}
+                    <a href="{{ .url | relURL }}" class="font-mono text-sm px-6 py-3 transition-colors
+             {{ if eq .class " go" }}bg-signal text-on-signal font-semibold hover:bg-text {{ else }}text-text
+                        hover:bg-surface hover:text-signal border-l border-border{{ end }}">
+                        {{ .label }}
+                    </a>
+                    {{ end }}
+                </div>
+            </div>
+
+            <div class="relative border border-border aspect-square">
+                <div
+                    class="before:absolute before:top-0 before:left-0 before:w-2.25 before:h-2.25 before:border-t before:border-l before:border-signal after:absolute after:bottom-0 after:right-0 after:w-2.25 after:h-2.25 after:border-b after:border-r after:border-signal">
+                    <span class="absolute top-2 left-3 font-mono text-[0.66rem] text-faint tracking-[0.16em] z-10">
+                        <b class="text-signal">NODE_GRAPH</b> // LIVE · <span id="net-stat">linking…</span>
+                    </span>
+                    {{ partial "netgraph.html" (dict "mode" "hero") }}
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>

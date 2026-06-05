@@ -1,0 +1,9 @@
+<a href="{{ .Get " url" | default "#" }}"
+  class="grid grid-cols-[56px_1fr_1.6fr_80px] gap-4 items-center px-5 py-5 border-b border-border hover:bg-surface transition-colors group">
+  <span class="font-mono text-sm text-signal">{{ .Get "id" | default "·" }}</span>
+  <span class="text-lg font-semibold text-text">{{ .Get "title" }}</span>
+  <span class="text-muted text-sm">{{ .Inner | markdownify | plainify }}</span>
+  <span class="font-mono text-xs text-faint text-right group-hover:text-signal after:group-hover:content-['_→']">
+    {{ .Get "more" | default "OPEN" }}
+  </span>
+</a>

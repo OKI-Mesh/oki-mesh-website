@@ -1,0 +1,25 @@
+{{ $id := .Get "id" | default "" }}
+{{ $label := .Get "label" | default "" }}
+{{ $tag := .Get "tag" | default "" }}
+{{ $variant := .Get "variant" | default "" }}
+
+<section class="py-[clamp(50px,8vw,88px)]{{ if eq $variant " directive" }} bg-surface border-y border-border{{ end }}"
+  {{ with $id }}id="{{ . }}" {{ end }}>
+  <div class="max-w-(--maxw) mx-auto px-[clamp(20px,4vw,56px)]">
+
+    {{ if $label }}
+    <div class="flex items-center gap-4 font-mono text-xs tracking-[0.18em] uppercase text-signal mb-7">
+      <span class="flex-1 h-px bg-border"></span>
+      {{ $label }}
+      <span class="flex-1 h-px bg-border"></span>
+      {{ with $tag }}<span class="text-faint text-[0.7rem]">{{ . }}</span>{{ end }}
+    </div>
+    {{ end }}
+
+    <div class="prose max-w-[72ch] text-muted
+      {{ if eq $variant " directive" }} border-l-2 border-signal pl-[clamp(20px,4vw,44px)]{{ end }}">
+      {{ .Inner | markdownify }}
+    </div>
+
+  </div>
+</section>

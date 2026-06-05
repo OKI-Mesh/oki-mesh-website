@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@custom-variant blue (&:where([data-theme="blue"], [data-theme="blue"] *));
+@custom-variant green (&:where([data-theme="green"], [data-theme="green"] *));
+
+@source "../../layouts/**/*.html";
+@source "../../themes/okimesh-radio/layouts/**/*.html";
+@source "../../content/**/*.md";
+
+@theme {
+  /* blue theme — default */
+
+  --color-bg: #080d18;
+  --color-bg-2: #0c1424;
+  --color-surface: #0f1d35;
+  --color-surface-2: #142445;
+  --color-border: rgba(100, 160, 220, 0.15);
+  --color-border-bright: rgba(34, 211, 238, 0.32);
+  --color-text: #e2f2ff;
+  --color-muted: #8ba8c8;
+  --color-faint: #4a6585;
+  --color-signal: #22d3ee;
+  --color-signal-dim: #0891b2;
+  --color-amber: #f59e0b;
+  --color-on-signal: #031020;
+}
+
+@layer base {
+  html[data-theme="green"] {
+    --color-signal: #34e2a4;
+    --color-signal-dim: #1f8f68;
+    --color-bg: #0a0d13;
+    --color-surface: #121823;
+    --color-text: #e8eef5;
+    --color-muted: #93a1b3;
+    --color-faint: #5f6b7c;
+    --color-on-signal: #04130d;
+  }
+
+  body {
+    color: theme(--color-text);
+    font-family: theme(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+
+}
+
+@layer components {
+  .prose {
+    @apply max-w-[72ch] text-muted leading-relaxed;
+  }
+  .prose h2 { @apply text-text text-2xl font-bold mt-10 mb-3; }
+  .prose h3 { @apply text-text text-xl font-semibold mt-8 mb-2; }
+  .prose p { @apply mb-4; }
+  .prose ul { @apply pl-5 mb-4; }
+  .prose li { @apply mt-1; }
+  .prose a { @apply text-signal underline underline-offset-2; }
+  .prose strong { @apply text-text; }
+  .prose code { @apply font-mono text-sm bg-surface px-1.5 py-0.5 rounded text-signal; }
+  .prose pre { @apply bg-surface border border-border rounded-lg p-5 overflow-x-auto; }
+  .prose blockquote { @apply border-l-2 border-signal pl-5 text-faint; }
+}

@@ -1,0 +1,14 @@
+<header>
+  <div class="wrap nav">
+    <a class="brand" href='{{ "/" | relURL }}'><img src="images/logo.svg" alt="{{ site.Title }}" height="48px"
+        width="48px" /></a>
+    <nav class="nav-links">
+      {{ range site.Menus.main }}
+      <a href="{{ .URL | relURL }}">{{ .Name }}</a>
+      {{ end }}
+    </nav>
+    {{ with site.Params.joinURL }}
+    <a class="nav-cta" href="{{ . }}">{{ site.Params.joinLabel | default "Join the mesh" }}</a>
+    {{ end }}
+  </div>
+</header>

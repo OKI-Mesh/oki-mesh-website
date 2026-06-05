@@ -1,0 +1,20 @@
+{{ define "main" }}
+<article class="py-[clamp(46px,7vw,78px)]">
+  <div class="max-w-(--maxw) mx-auto px-[clamp(20px,4vw,56px)]">
+
+    <div class="max-w-[70ch] mb-9">
+      {{ with .Params.eyebrow }}
+      <p class="font-mono text-xs text-signal tracking-[0.18em] uppercase mb-3">{{ . }}</p>
+      {{ end }}
+      <h1 class="text-[clamp(2rem,4vw,3rem)] font-bold tracking-tight">{{ .Title }}</h1>
+      {{ if not .Date.IsZero }}
+      <p class="font-mono text-xs text-faint mt-3">{{ .Date.Format "Jan 2, 2006" }}{{ with .Params.author }} · {{ . }}{{
+        end }}</p>
+      {{ end }}
+    </div>
+
+    <div class="prose">{{ .Content }}</div>
+
+  </div>
+</article>
+{{ end }}

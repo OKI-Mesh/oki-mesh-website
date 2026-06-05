@@ -1,0 +1,20 @@
+{{ $id := .Get "id" | default "start" }}
+{{ $label := .Get "label" | default "START HERE" }}
+{{ $tag := .Get "tag" | default "" }}
+
+<section class="py-[clamp(50px,8vw,88px)]" id="{{ $id }}">
+  <div class="max-w-(--maxw) mx-auto px-[clamp(20px,4vw,56px)]">
+
+    <div class="flex items-center gap-4 font-mono text-xs tracking-[0.18em] uppercase text-signal mb-7">
+      <span class="flex-1 h-px bg-border"></span>
+      {{ $label }}
+      <span class="flex-1 h-px bg-border"></span>
+      {{ with $tag }}<span class="text-faint text-[0.7rem]">{{ . }}</span>{{ end }}
+    </div>
+
+    <div class="border border-border border-b-0">
+      {{ .Inner }}
+    </div>
+
+  </div>
+</section>

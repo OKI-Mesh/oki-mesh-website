@@ -1,0 +1,24 @@
+<script>
+  (function () {
+    var KEY = "okimesh-theme";
+    var btns = document.querySelectorAll(".sw[data-theme-set]");
+    function current() {
+      return document.documentElement.getAttribute("data-theme") || "blue";
+    }
+    function sync() {
+      var c = current();
+      btns.forEach(function (b) {
+        b.setAttribute("aria-pressed", b.dataset.themeSet === c ? "true" : "false");
+      });
+    }
+    btns.forEach(function (b) {
+      b.addEventListener("click", function () {
+        var t = b.dataset.themeSet;
+        document.documentElement.setAttribute("data-theme", t);
+        try { localStorage.setItem(KEY, t); } catch (e) {}
+        sync();
+      });
+    });
+    sync();
+  })();
+</script>

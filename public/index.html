@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+	<meta name="generator" content="Hugo 0.162.1"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>OKI Mesh</title>
+<meta name="description" content="Off-grid LoRa mesh network for the OKI tri-state. Powered by MeshCore." />
+<meta name="theme-color" content="#081320" />
+
+
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem("okimesh-theme");
+      if (t) document.documentElement.setAttribute("data-theme", t);
+    } catch (e) { }
+  })();
+</script>
+
+
+<meta property="og:title" content="OKI Mesh" />
+<meta property="og:description"
+  content="Off-grid LoRa mesh network for the OKI tri-state. Powered by MeshCore." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://localhost:1313/" />
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
+  rel="stylesheet" />
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+
+
+
+</head>
+
+<body class="bg-bg text-text">
+  <aside
+  class="fixed top-0 left-0 h-screen w-rail bg-bg-2 border-r border-border z-40 flex flex-col items-center justify-between py-4 shrink-0"
+  aria-hidden="true">
+
+  <span class="w-2 h-2 rounded-full bg-signal shadow-[0_0_8px_var(--color-signal)]" title="online"></span>
+  <div class="[writing-mode:vertical-rl] rotate-180 font-mono text-[0.7rem] tracking-[0.42em] uppercase text-faint">
+    OKI Mesh <b class="text-signal font-semibold">// MESH ONLINE</b>
+  </div>
+  <div class="flex flex-col gap-1.75 items-center">
+    
+    <i class="w-3.5 h-px bg-border block not-italic nth-[5n+1]:w-5.5 nth-[5n+1]:bg-faint"></i>
+    
+    <i class="w-3.5 h-px bg-border block not-italic nth-[5n+1]:w-5.5 nth-[5n+1]:bg-faint"></i>
+    
+    <i class="w-3.5 h-px bg-border block not-italic nth-[5n+1]:w-5.5 nth-[5n+1]:bg-faint"></i>
+    
+    <i class="w-3.5 h-px bg-border block not-italic nth-[5n+1]:w-5.5 nth-[5n+1]:bg-faint"></i>
+    
+    <i class="w-3.5 h-px bg-border block not-italic nth-[5n+1]:w-5.5 nth-[5n+1]:bg-faint"></i>
+    
+    <i class="w-3.5 h-px bg-border block not-italic nth-[5n+1]:w-5.5 nth-[5n+1]:bg-faint"></i>
+    
+    <i class="w-3.5 h-px bg-border block not-italic nth-[5n+1]:w-5.5 nth-[5n+1]:bg-faint"></i>
+    
+    <i class="w-3.5 h-px bg-border block not-italic nth-[5n+1]:w-5.5 nth-[5n+1]:bg-faint"></i>
+    
+    <i class="w-3.5 h-px bg-border block not-italic nth-[5n+1]:w-5.5 nth-[5n+1]:bg-faint"></i>
+    
+    <i class="w-3.5 h-px bg-border block not-italic nth-[5n+1]:w-5.5 nth-[5n+1]:bg-faint"></i>
+    
+    <i class="w-3.5 h-px bg-border block not-italic nth-[5n+1]:w-5.5 nth-[5n+1]:bg-faint"></i>
+    
+    <i class="w-3.5 h-px bg-border block not-italic nth-[5n+1]:w-5.5 nth-[5n+1]:bg-faint"></i>
+    
+    <i class="w-3.5 h-px bg-border block not-italic nth-[5n+1]:w-5.5 nth-[5n+1]:bg-faint"></i>
+    
+    <i class="w-3.5 h-px bg-border block not-italic nth-[5n+1]:w-5.5 nth-[5n+1]:bg-faint"></i>
+    
+    <i class="w-3.5 h-px bg-border block not-italic nth-[5n+1]:w-5.5 nth-[5n+1]:bg-faint"></i>
+    
+    <i class="w-3.5 h-px bg-border block not-italic nth-[5n+1]:w-5.5 nth-[5n+1]:bg-faint"></i>
+    
+  </div>
+</aside>
+
+  <div class="pl-rail min-h-screen flex flex-col">
+    <header class="sticky top-0 z-30 bg-bg/80 backdrop-blur-md border-b border-(--color-border) font-mono">
+  <div class="max-w-(--maxw) mx-auto px-[clamp(20px,4vw,56px)] flex items-center gap-5 h-14">
+    <a href="/" class="flex items-center gap-2 font-semibold tracking-wide shrink-0">
+      
+      <img src="/images/logo-mark.svg" alt="" style="width:32px;height:32px;display:block;flex-shrink:0;" />
+      
+      OKI Mesh
+    </a>
+    <nav class=" flex gap-6 ml-2 text-sm">
+      
+      <a href="/#what" class="text-muted hover:text-text transition-colors">What is it</a>
+      
+      <a href="/getting-started/" class="text-muted hover:text-text transition-colors">Get started</a>
+      
+      <a href="/coverage/" class="text-muted hover:text-text transition-colors">Coverage</a>
+      
+    </nav>
+    <span class="flex-1"></span>
+    
+    <div class="flex items-center gap-2" role="group" aria-label="Color theme">
+      <button type="button"
+        class="w-4 h-4 rounded-full bg-signal border-2 border-transparent aria-pressed:border-text cursor-pointer"
+        data-theme-set="blue" aria-label="Blue theme"></button>
+      <button type="button"
+        class="w-4 h-4 rounded-full bg-[#34e2a4] border-2 border-transparent aria-pressed:border-text cursor-pointer"
+        data-theme-set="green" aria-label="Green theme"></button>
+    </div>
+  </div>
+</header>
+    <main class="flex-1">
+      
+
+<section class="relative min-h-[70vh] flex items-center pt-6">
+    <div class="max-w-(--maxw) mx-auto px-[clamp(20px,4vw,56px)]">
+        <div class="grid grid-cols-2 gap-7 items-center">
+
+            <div>
+                <p class="font-mono text-xs text-faint tracking-[0.14em] mb-5">
+                    39.1055° N, 84.8201° W ·
+                    OH / KY / IN ·
+                    910.525 MHz
+                </p>
+                <h1 class="text-[clamp(2.5rem,6.4vw,4.9rem)] font-bold leading-[0.98] tracking-tight mb-6">
+                    A radio network the 
+                    <span class="block text-signal">whole region carries.</span>
+                </h1>
+                <p class="text-muted text-lg max-w-[50ch] mb-8">OKIMesh is a volunteer-run <b>LoRa mesh</b> across the Southwest Ohio, Southeast Indiana, and Northern Kentucky — messaging that keeps working when the internet and cell network don't. No towers, no servers, no monthly bill.</p>
+                <div class="flex border border-border w-fit">
+                    
+                    <a href="/getting-started/" class="font-mono text-sm px-6 py-3 transition-colors
+             text-text
+                        hover:bg-surface hover:text-signal border-l border-border">
+                        JOIN →
+                    </a>
+                    
+                    <a href="https://map.okimesh.org/" class="font-mono text-sm px-6 py-3 transition-colors
+             text-text
+                        hover:bg-surface hover:text-signal border-l border-border">
+                        COVERAGE
+                    </a>
+                    
+                </div>
+            </div>
+
+            <div class="relative border border-border aspect-square">
+                <div
+                    class="before:absolute before:top-0 before:left-0 before:w-2.25 before:h-2.25 before:border-t before:border-l before:border-signal after:absolute after:bottom-0 after:right-0 after:w-2.25 after:h-2.25 after:border-b after:border-r after:border-signal">
+                    <span class="absolute top-2 left-3 font-mono text-[0.66rem] text-faint tracking-[0.16em] z-10">
+                        <b class="text-signal">NODE_GRAPH</b> // LIVE · <span id="net-stat">linking…</span>
+                    </span>
+                    
+
+
+
+
+
+
+
+
+
+<div id="netgraph" data-mode="hero"  data-fallback="/network.json"
+  class="relative w-full h-[72vh] min-h-[460px] border
+  border-border bg-linear-to-b from-surface to-bg" style="">
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js" defer></script>
+<script src="/js/network.js" defer></script>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<div class="border-y border-border py-2.5 overflow-x-auto">
+    <div class="flex items-center font-mono text-xs whitespace-nowrap px-[clamp(20px,4vw,56px)] gap-0" id="stat-line">
+        <span class="text-faint">NODES</span><span class="text-text font-medium ml-2" id="sl-nodes">—</span>
+        <span class="text-border mx-4">·</span>
+        <span class="text-faint">REPEATERS</span><span class="text-text font-medium ml-2" id="sl-rep">—</span>
+        <span class="text-border mx-4">·</span>
+        <span class="text-faint">PKT / 1H</span><span class="text-text font-medium ml-2" id="sl-1h">—</span>
+        <span class="text-border mx-4">·</span>
+        <span class="text-faint">PKT / 24H</span><span class="text-text font-medium ml-2" id="sl-24h">—</span>
+        <span class="text-border mx-4">·</span>
+        <span class="text-faint">OBSERVATIONS</span><span class="text-text font-medium ml-2" id="sl-obs">—</span>
+        <span class="mx-4 text-faint text-[10px]">——</span>
+        <span class="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></span>
+        <span class="text-faint ml-1.5 text-[10px]">LIVE</span>
+    </div>
+</div>
+
+<script>
+    fetch("https://corescope.w8oof.net/api/stats")
+        .then(r => r.json())
+        .then(d => {
+            document.getElementById("sl-nodes").textContent = d.totalNodes.toLocaleString();
+            document.getElementById("sl-rep").textContent = d.counts.repeaters.toLocaleString();
+            document.getElementById("sl-1h").textContent = d.packetsLastHour.toLocaleString();
+            document.getElementById("sl-24h").textContent = d.packetsLast24h.toLocaleString();
+            document.getElementById("sl-obs").textContent = d.totalObservations.toLocaleString();
+        })
+        .catch(() => { });
+</script>
+
+
+
+
+
+
+<section class="py-[clamp(50px,8vw,88px)]"
+  id="mission" >
+  <div class="max-w-(--maxw) mx-auto px-[clamp(20px,4vw,56px)]">
+
+    
+    <div class="flex items-center gap-4 font-mono text-xs tracking-[0.18em] uppercase text-signal mb-7">
+      <span class="flex-1 h-px bg-border"></span>
+      00 · MISSION
+      <span class="flex-1 h-px bg-border"></span>
+      <span class="text-faint text-[0.7rem]">DIRECTIVE</span>
+    </div>
+    
+
+    <div class="prose max-w-[72ch] text-muted
+      ">
+      <h2 id="a-community-network-the-whole-region-carries">A community network the whole region carries.</h2>
+<p>The OKI Mesh Alliance is a volunteer-built, <strong>community-owned</strong> communications network
+serving southwest Ohio, southeast Indiana, and northern Kentucky. Using low-power LoRa
+radio and the open MeshCore protocol, we run a resilient, decentralized mesh that
+operates independently of internet, cellular infrastructure, and centralized control.</p>
+<p>Our mission — to strengthen regional connectivity by empowering local communities to
+build <strong>independent, resilient communications infrastructure</strong> through grassroots
+education, experimentation, and collaborative volunteerism.</p>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+
+<section class="py-[clamp(50px,8vw,88px)]" id="start">
+  <div class="max-w-(--maxw) mx-auto px-[clamp(20px,4vw,56px)]">
+
+    <div class="flex items-center gap-4 font-mono text-xs tracking-[0.18em] uppercase text-signal mb-7">
+      <span class="flex-1 h-px bg-border"></span>
+      01 · START HERE
+      <span class="flex-1 h-px bg-border"></span>
+      <span class="text-faint text-[0.7rem]">3 ENTRIES</span>
+    </div>
+
+    <div class="border border-border border-b-0">
+      
+<a href="#"
+  class="grid grid-cols-[56px_1fr_1.6fr_80px] gap-4 items-center px-5 py-5 border-b border-border hover:bg-surface transition-colors group">
+  <span class="font-mono text-sm text-signal">0x01</span>
+  <span class="text-lg font-semibold text-text">How mesh works</span>
+  <span class="text-muted text-sm">LoRa, hops, and why coverage grows as people join — no infrastructure required.</span>
+  <span class="font-mono text-xs text-faint text-right group-hover:text-signal after:group-hover:content-['_→']">
+    LEARN
+  </span>
+</a>
+<a href="#"
+  class="grid grid-cols-[56px_1fr_1.6fr_80px] gap-4 items-center px-5 py-5 border-b border-border hover:bg-surface transition-colors group">
+  <span class="font-mono text-sm text-signal">0x02</span>
+  <span class="text-lg font-semibold text-text">Build a node</span>
+  <span class="text-muted text-sm">Pick hardware, flash MeshCore, and dial in the tri-state channel settings.</span>
+  <span class="font-mono text-xs text-faint text-right group-hover:text-signal after:group-hover:content-['_→']">
+    SETUP
+  </span>
+</a>
+<a href="#"
+  class="grid grid-cols-[56px_1fr_1.6fr_80px] gap-4 items-center px-5 py-5 border-b border-border hover:bg-surface transition-colors group">
+  <span class="font-mono text-sm text-signal">0x03</span>
+  <span class="text-lg font-semibold text-text">Coverage map</span>
+  <span class="text-muted text-sm">Where the mesh reaches today and which ridgelines we still need filled.</span>
+  <span class="font-mono text-xs text-faint text-right group-hover:text-signal after:group-hover:content-['_→']">
+    MAP
+  </span>
+</a>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+<section class="py-[clamp(50px,8vw,88px)]"
+  id="what" >
+  <div class="max-w-(--maxw) mx-auto px-[clamp(20px,4vw,56px)]">
+
+    
+    <div class="flex items-center gap-4 font-mono text-xs tracking-[0.18em] uppercase text-signal mb-7">
+      <span class="flex-1 h-px bg-border"></span>
+      02 · WHAT IS IT
+      <span class="flex-1 h-px bg-border"></span>
+      
+    </div>
+    
+
+    <div class="prose max-w-[72ch] text-muted
+      ">
+      <h2 id="infrastructure-nobody-owns">Infrastructure nobody owns.</h2>
+<p>Every node is a small, low-power radio that relays for every other node. Add one and
+the whole network gets a little stronger — there&rsquo;s no center to fail and nothing to
+subscribe to.</p>
+<ul>
+<li><strong>No infrastructure.</strong> Works during outages — no power grid, cell, or internet required.</li>
+<li><strong>Encrypted by default.</strong> Direct messages and channels are secured end to end.</li>
+<li><strong>Cheap to join.</strong> A capable node costs under $50 and sips battery.</li>
+<li><strong>Community-run.</strong> Volunteer-owned and fully open. Coverage grows node by node.</li>
+</ul>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="py-[clamp(56px,9vw,98px)]" id="join">
+  <div class="max-w-(--maxw) mx-auto px-[clamp(20px,4vw,56px)]">
+
+    <div class="border border-signal/30 p-[clamp(30px,5vw,56px)] relative bg-linear-to-br from-surface to-bg">
+      <span class="absolute top-3 right-4 font-mono text-[0.7rem] text-signal tracking-widest">● TX</span>
+
+      
+      <h2 class="text-[clamp(1.8rem,4vw,2.9rem)] font-bold tracking-tight mb-4 max-w-[18ch]">Put a node on the air.</h2>
+      
+
+      
+      <p class="text-muted max-w-[52ch] mb-7">The fastest way in is the chat — ask questions, watch the live node map, and get help
+flashing your first radio. No experience needed.</p>
+      
+
+      <div class="flex border border-border w-fit">
+        
+        <a href="#"
+          class="font-mono text-sm px-6 py-3 bg-signal text-on-signal font-semibold hover:bg-text transition-colors">
+          JOIN THE CHAT →
+        </a>
+        
+        
+        <a href="#"
+          class="font-mono text-sm px-6 py-3 text-text hover:bg-surface hover:text-signal border-l border-border transition-colors">
+          EMAIL US
+        </a>
+        
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+    </main>
+    <footer class="border-t border-border bg-bg/80 backdrop-blur-md font-mono text-sm">
+  <div class="max-w-(--maxw) mx-auto px-[clamp(20px,4vw,56px)] flex items-center justify-between py-4 gap-8">
+
+    <span class="flex items-center gap-2 text-text font-semibold shrink-0">
+      <span class="w-2 h-2 rounded-full bg-signal shrink-0" style="box-shadow:0 0 8px var(--color-signal)"></span>
+      OKI Mesh
+    </span>
+
+    <span class="flex gap-6">
+      
+      <a href="https://discord.gg/HAvyKm7yP"  rel="noopener" target="_blank" 
+        class="text-muted hover:text-signal transition-colors">Discord</a>
+      
+      <a href="https://github.com/OKI-Mesh"  rel="noopener" target="_blank" 
+        class="text-muted hover:text-signal transition-colors">GitHub</a>
+      
+    </span>
+
+    <span class="text-faint text-xs shrink-0">
+      Ohio · Kentucky · Indiana · © 2026
+    </span>
+
+  </div>
+</footer>
+  </div>
+
+  <script>
+  (function () {
+    var KEY = "okimesh-theme";
+    var btns = document.querySelectorAll(".sw[data-theme-set]");
+    function current() {
+      return document.documentElement.getAttribute("data-theme") || "blue";
+    }
+    function sync() {
+      var c = current();
+      btns.forEach(function (b) {
+        b.setAttribute("aria-pressed", b.dataset.themeSet === c ? "true" : "false");
+      });
+    }
+    btns.forEach(function (b) {
+      b.addEventListener("click", function () {
+        var t = b.dataset.themeSet;
+        document.documentElement.setAttribute("data-theme", t);
+        try { localStorage.setItem(KEY, t); } catch (e) {}
+        sync();
+      });
+    });
+    sync();
+  })();
+</script>
+
+</body>
+
+</html>

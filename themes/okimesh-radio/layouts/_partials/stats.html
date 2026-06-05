@@ -1,0 +1,29 @@
+<div class="border-y border-border py-2.5 overflow-x-auto">
+    <div class="flex items-center font-mono text-xs whitespace-nowrap px-[clamp(20px,4vw,56px)] gap-0" id="stat-line">
+        <span class="text-faint">NODES</span><span class="text-text font-medium ml-2" id="sl-nodes">—</span>
+        <span class="text-border mx-4">·</span>
+        <span class="text-faint">REPEATERS</span><span class="text-text font-medium ml-2" id="sl-rep">—</span>
+        <span class="text-border mx-4">·</span>
+        <span class="text-faint">PKT / 1H</span><span class="text-text font-medium ml-2" id="sl-1h">—</span>
+        <span class="text-border mx-4">·</span>
+        <span class="text-faint">PKT / 24H</span><span class="text-text font-medium ml-2" id="sl-24h">—</span>
+        <span class="text-border mx-4">·</span>
+        <span class="text-faint">OBSERVATIONS</span><span class="text-text font-medium ml-2" id="sl-obs">—</span>
+        <span class="mx-4 text-faint text-[10px]">——</span>
+        <span class="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></span>
+        <span class="text-faint ml-1.5 text-[10px]">LIVE</span>
+    </div>
+</div>
+
+<script>
+    fetch("https://corescope.w8oof.net/api/stats")
+        .then(r => r.json())
+        .then(d => {
+            document.getElementById("sl-nodes").textContent = d.totalNodes.toLocaleString();
+            document.getElementById("sl-rep").textContent = d.counts.repeaters.toLocaleString();
+            document.getElementById("sl-1h").textContent = d.packetsLastHour.toLocaleString();
+            document.getElementById("sl-24h").textContent = d.packetsLast24h.toLocaleString();
+            document.getElementById("sl-obs").textContent = d.totalObservations.toLocaleString();
+        })
+        .catch(() => { });
+</script>

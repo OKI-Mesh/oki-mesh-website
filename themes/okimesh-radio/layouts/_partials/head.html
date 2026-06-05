@@ -1,0 +1,46 @@
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} · {{ site.Title }}{{ end }}</title>
+<meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}" />
+<meta name="theme-color" content="#081320" />
+
+<!-- apply saved color theme before paint (no flash) -->
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem("okimesh-theme");
+      if (t) document.documentElement.setAttribute("data-theme", t);
+    } catch (e) { }
+  })();
+</script>
+
+<!-- Open Graph -->
+<meta property="og:title" content="{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }}{{ end }}" />
+<meta property="og:description"
+  content="{{ with .Description }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="{{ .Permalink }}" />
+{{ with site.Params.ogImage }}
+<meta property="og:image" content="{{ . | absURL }}" />{{ end }}
+
+<!-- fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
+  rel="stylesheet" />
+
+<!-- styles: plain CSS, no Node/Tailwind required -->
+{{ with resources.Get "css/main.css" | css.TailwindCSS }}
+{{ $css := . }}
+{{ if hugo.IsProduction }}
+{{ $css = $css | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}" />
+{{ else }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" />
+{{ end }}
+{{ end }}
+
+{{ range site.Params.extraHeadLinks }}
+<link rel="stylesheet" href="{{ . }}" />
+{{ end }}

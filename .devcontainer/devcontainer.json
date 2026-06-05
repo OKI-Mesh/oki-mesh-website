@@ -1,0 +1,25 @@
+{
+	"name": "Hugo",
+	"image": "hugomods/hugo:debian-non-root-0.162.1",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"budparr.language-hugo-vscode",
+				"ms-vscode.Go"
+			],
+			"settings": {
+				"editor.formatOnSave": true,
+			}
+		}
+	},
+	"postCreateCommand": "npm install",
+	"forwardPorts": [
+		1313
+	],
+	"portsAttributes": {
+		"1313": {
+			"label": "Hugo Server",
+			"onAutoForward": "notify"
+		}
+	}
+}

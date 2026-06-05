@@ -1,0 +1,26 @@
+{{/* params: dict "mode" "hero|full" "height" "..." */}}
+{{ $mode := .mode | default "full" }}
+{{ $api := site.Params.networkApi }}
+
+{{ $dataURL := "network.json" | relURL }}
+{{ if and $api hugo.IsProduction }}
+{{ with try (resources.GetRemote $api) }}
+{{ with .Err }}
+{{ warnf "netgraph: live fetch failed, using committed fallback: %s" . }}
+{{ else with .Value }}
+{{ $snap := . | resources.Copy "network-live.json" }}
+{{ $dataURL = $snap.RelPermalink }}
+{{ end }}
+{{ end }}
+{{ end }}
+
+{{ $js := resources.Get "js/network.js" }}
+{{ if hugo.IsProduction }}{{ $js = $js | minify | fingerprint }}{{ end }}
+
+<div id="netgraph" data-mode="{{ $mode }}" {{ with $api }}data-api="{{ . }}" {{ end }} data-fallback="{{ $dataURL }}"
+  class="{{ if eq $mode " hero" }}absolute inset-0 w-full h-full{{ else }}relative w-full h-[72vh] min-h-[460px] border
+  border-border bg-linear-to-b from-surface to-bg{{ end }}" style="{{ with .height }}height:{{ . }};{{ end }}">
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js" defer></script>
+<script src="{{ $js.RelPermalink }}" defer></script>

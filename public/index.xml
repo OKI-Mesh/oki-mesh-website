@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>OKIMesh on OKI Mesh</title>
+		<link>http://localhost:1313/</link>
+		<description>Recent content in OKIMesh on OKI Mesh</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Coverage</title>
+				<link>http://localhost:1313/coverage/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/coverage/</guid>
+				<description>&lt;p&gt;Coverage grows every week as members put up nodes. The map below shows current&#xA;repeaters and known coverage across Greater Cincinnati, Dayton, and Northern&#xA;Kentucky.&lt;/p&gt;&#xA;&lt;div class=&#34;w-full h-[70vh] min-h-120&#34;&gt;&#xA;    &lt;iframe src=&#34;https://corescope.w8oof.net/#/live&#34; class=&#34;w-full h-full border-0&#34; allowfullscreen&gt;&#xA;    &lt;/iframe&gt;&#xA;&lt;/div&gt;&#xA;&lt;p&gt;&lt;strong&gt;Want to fill a gap?&lt;/strong&gt; High spots — water towers, ridgelines, tall rooftops —&#xA;make the biggest difference. Reach out if you can host a repeater.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Getting Started</title>
+				<link>http://localhost:1313/getting-started/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/getting-started/</guid>
+				<description>&lt;p&gt;New to mesh? Start here. You&amp;rsquo;ll have a node on the air in an afternoon.&lt;/p&gt;&#xA;&lt;h2 id=&#34;1-get-a-radio&#34;&gt;1. Get a radio&lt;/h2&gt;&#xA;&lt;p&gt;Almost any MeshCore-compatible LoRa board works. Good first nodes for the&#xA;915 MHz US band:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Heltec T114&lt;/strong&gt; - cheap, easy to flash, low power, great for a first client node.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Heltec V3&lt;/strong&gt; - cheap, easy to flash, great for a first client node.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;RAK WisBlock (RAK4631)&lt;/strong&gt; - low power, ideal for solar repeaters.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Seeed T1000-E&lt;/strong&gt; - pocketable tracker-style client.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;2-flash-meshcore&#34;&gt;2. Flash MeshCore&lt;/h2&gt;&#xA;&lt;p&gt;Flash the latest MeshCore firmware for your board, then set the regional&#xA;parameters so you land on the OKI Mesh:&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Live Network</title>
+				<link>http://localhost:1313/network/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/network/</guid>
+				<description></description>
+			</item>
+	</channel>
+</rss>
