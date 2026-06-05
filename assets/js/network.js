@@ -8,6 +8,7 @@
   const FALLBACK = mount.dataset.fallback;
   const MODE = mount.dataset.mode || "full";
   const HERO_LIMIT = 42;
+  const PAD = 12;
 
   function cssVar(n) { return getComputedStyle(document.documentElement).getPropertyValue(n).trim(); }
 
@@ -97,15 +98,14 @@
       }).on("mouseleave", () => tip.style("opacity", 0));
     }
 
-    const sim = d3.forceSimulation(graph.nodes)
-      .force("link", d3.forceLink(graph.edges).id(d => d.pubkey)
-        .distance(d => isHero ? 50 : 36).strength(d => 0.05 + 0.4 * (d.score || 0)))
-      .force("charge", d3.forceManyBody().strength(isHero ? -120 : -60))
-      .force("center", d3.forceCenter(W / 2, H / 2))
-      .force("x", d3.forceX(W / 2).strength(0.05))
-      .force("y", d3.forceY(H / 2).strength(0.05))
-      .force("collide", d3.forceCollide().radius(d => r(d) + 2));
-
+const sim = d3.forceSimulation(graph.nodes)
+  .force("link", d3.forceLink(graph.edges).id(d => d.pubkey)
+    .distance(d => isHero ? 50 : 36).strength(d => 0.05 + 0.4 * (d.score || 0)))
+  .force("charge", d3.forceManyBody().strength(isHero ? -80 : -30))
+  .force("center", d3.forceCenter(W / 2, H / 2))
+  .force("x", d3.forceX(W / 2).strength(0.08))
+  .force("y", d3.forceY(H / 2).strength(0.08))
+  .force("collide", d3.forceCollide().radius(d => r(d) + 2));
     sim.on("tick", () => {
       graph.nodes.forEach(d => {
         const rad = r(d) + PAD;
