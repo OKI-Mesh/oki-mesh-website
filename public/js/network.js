@@ -4,9 +4,9 @@
   const mount = document.getElementById("netgraph");
   if (!mount) return;
 
-  const API = mount.dataset.api;
-  const FALLBACK = mount.dataset.fallback;
-  const MODE = mount.dataset.mode || "full";
+  const BASE = mount.dataset.base;
+  const API  = BASE + "/api/analytics/neighbor-graph";
+  const STATS_API = BASE + "/api/stats";
   const HERO_LIMIT = 42;
   const PAD = 12;
 
@@ -24,8 +24,7 @@
   }
 
   async function loadStats() {
-    const url = API.replace("/analytics/neighbor-graph", "/stats");
-    const r = await fetch(url, { mode: "cors" });
+    const r = await fetch(STATS_API, { mode: "cors" });
     if (!r.ok) throw new Error("stats fetch failed");
     return await r.json();
   }

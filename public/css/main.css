@@ -208,9 +208,6 @@
   .sticky {
     position: sticky;
   }
-  .inset-0 {
-    inset: calc(var(--spacing) * 0);
-  }
   .top-0 {
     top: calc(var(--spacing) * 0);
   }
@@ -301,9 +298,6 @@
   .h-\[70vh\] {
     height: 70vh;
   }
-  .h-\[72vh\] {
-    height: 72vh;
-  }
   .h-full {
     height: 100%;
   }
@@ -318,9 +312,6 @@
   }
   .min-h-\[70vh\] {
     min-height: 70vh;
-  }
-  .min-h-\[460px\] {
-    min-height: 460px;
   }
   .min-h-screen {
     min-height: 100vh;
@@ -514,13 +505,6 @@
   }
   .bg-surface {
     background-color: var(--color-surface);
-  }
-  .bg-linear-to-b {
-    --tw-gradient-position: to bottom;
-    @supports (background-image: linear-gradient(in lab, red, red)) {
-      --tw-gradient-position: to bottom in oklab;
-    }
-    background-image: linear-gradient(var(--tw-gradient-stops));
   }
   .bg-linear-to-br {
     --tw-gradient-position: to bottom right;

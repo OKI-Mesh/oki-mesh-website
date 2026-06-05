@@ -1,7 +1,0 @@
-name = "OKI Mesh"
-license = "MIT"
-description = "A lean, dark, RF-instrument theme for community LoRa mesh sites. No modules, no npm, no build step."
-min_version = "0.146.0"
-
-[author]
-  name = "OKI Mesh"
