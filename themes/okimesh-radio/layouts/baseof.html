@@ -8,7 +8,7 @@
 <body class="bg-bg text-text">
   {{ partial "bezel.html" . }}
 
-  <div class="pl-rail min-h-screen flex flex-col">
+  <div class="md:pl-rail min-h-screen flex flex-col">
     {{ partial "header.html" . }}
     <main class="flex-1">
       {{ block "main" . }}{{ end }}

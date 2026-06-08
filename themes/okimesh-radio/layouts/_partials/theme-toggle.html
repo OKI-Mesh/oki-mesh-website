@@ -1,9 +1,9 @@
 <script>
   (function () {
     var KEY = "okimesh-theme";
-    var btns = document.querySelectorAll(".sw[data-theme-set]");
+    var btns = document.querySelectorAll("[data-theme-set]");
     function current() {
-      return document.documentElement.getAttribute("data-theme") || "blue";
+      return document.documentElement.getAttribute("data-theme") || "meshcore";
     }
     function sync() {
       var c = current();

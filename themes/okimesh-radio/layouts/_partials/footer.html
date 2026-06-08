@@ -1,22 +1,23 @@
 <footer class="border-t border-border bg-bg/80 backdrop-blur-md font-mono text-sm">
-  <div class="max-w-(--maxw) mx-auto px-[clamp(20px,4vw,56px)] flex items-center justify-between py-4 gap-8">
+  <div class="wrap flex flex-col md:flex-row items-start md:items-center justify-between py-4 gap-3">
 
     <span class="flex items-center gap-2 text-text font-semibold shrink-0">
-      <span class="w-2 h-2 rounded-full bg-signal shrink-0" style="box-shadow:0 0 8px var(--color-signal)"></span>
+      <span class="w-2 h-2 rounded-full bg-signal inline-block"></span>
       {{ site.Title }}
     </span>
 
-    <span class="flex gap-6">
+    <span class="flex gap-5">
       {{ range site.Params.social }}
-      <a href="{{ .url }}" {{ if hasPrefix .url "http" }} rel="noopener" target="_blank" {{ end }}
-        class="text-muted hover:text-signal transition-colors">{{ .name }}</a>
+      <a href="{{ .url }}"{{ if hasPrefix .url "http" }} rel="noopener" target="_blank"{{ end }}
+         class="text-muted hover:text-signal transition-colors">{{ .name }}</a>
       {{ end }}
     </span>
 
-    <span class="text-faint text-xs shrink-0">
-      {{ with site.Params.region }}{{ . }} · {{ end }}{{ with site.Params.frequency }}{{ . }} · {{ end }}© {{ now.Year
-      }}
+    <span class="hidden md:block text-faint text-xs shrink-0">
+      {{ with site.Params.region }}{{ . }} · {{ end }}{{ with site.Params.frequency }}{{ . }} · {{ end }}© {{ now.Year }}
     </span>
+
+    <span class="md:hidden text-faint text-xs">© {{ now.Year }}</span>
 
   </div>
 </footer>
