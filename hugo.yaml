@@ -4,6 +4,7 @@ theme: "okimesh-radio"
 enableRobotsTXT: true
 
 params:
+  api_server: https://map.okimesh.org
   home:
     headline_pre: "A radio network the "
     headline_accent: "whole region carries."

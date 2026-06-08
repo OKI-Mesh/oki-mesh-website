@@ -1,27 +1,84 @@
-<header class="sticky top-0 z-30 bg-bg/80 backdrop-blur-md border-b border-(--color-border) font-mono">
-  <div class="max-w-(--maxw) mx-auto px-[clamp(20px,4vw,56px)] flex items-center gap-5 h-14">
+<header class="sticky top-0 z-30 bg-bg/80 backdrop-blur-md border-b border-border font-mono">
+  <div class="max-w-[var(--width-maxw)] mx-auto px-[clamp(20px,4vw,56px)] flex items-center gap-5 h-14">
+
     <a href="/" class="flex items-center gap-2 font-semibold tracking-wide shrink-0">
       {{ with resources.Get "images/logo-mark.svg" }}
-      <img src="{{ .RelPermalink }}" alt="" style="width:32px;height:32px;display:block;flex-shrink:0;" />
+      <img src="{{ .RelPermalink }}" alt="{{ site.Title }}" style="width:32px;height:32px;display:block;flex-shrink:0;" />
       {{ end }}
       {{ site.Title }}
     </a>
-    <nav class=" flex gap-6 ml-2 text-sm">
+
+    <!-- desktop nav -->
+    <nav class="hidden md:flex gap-6 ml-2 text-sm">
       {{ range site.Menus.main }}
       <a href="{{ .URL | relURL }}" class="text-muted hover:text-text transition-colors">{{ .Name }}</a>
       {{ end }}
     </nav>
+
     <span class="flex-1"></span>
+
+    <!-- frequency readout — desktop only -->
     {{ with site.Params.frequency }}
-    <span class="text-xs text-faint">FREQ <b class="text-signal font-medium">{{ . }}</b></span>
+    <span class="hidden md:block text-xs text-faint">FREQ <b class="text-signal font-medium">{{ . }}</b></span>
     {{ end }}
+
+    <!-- theme toggle -->
     <div class="flex items-center gap-2" role="group" aria-label="Color theme">
-      <button type="button"
-        class="w-4 h-4 rounded-full bg-signal border-2 border-transparent aria-pressed:border-text cursor-pointer"
-        data-theme-set="blue" aria-label="Blue theme"></button>
-      <button type="button"
-        class="w-4 h-4 rounded-full bg-[#34e2a4] border-2 border-transparent aria-pressed:border-text cursor-pointer"
-        data-theme-set="green" aria-label="Green theme"></button>
+      <button type="button" class="w-4 h-4 rounded-full bg-[#22d3ee] border-2 border-transparent cursor-pointer" data-theme-set="meshcore" aria-label="MeshCore theme"></button>
+      <button type="button" class="w-4 h-4 rounded-full bg-[#34e2a4] border-2 border-transparent cursor-pointer" data-theme-set="green" aria-label="Green theme"></button>
+      <button type="button" class="w-4 h-4 rounded-full bg-[#f8fafc] border-2 border-[#cbd5e1] cursor-pointer" data-theme-set="light" aria-label="Light theme"></button>
     </div>
+
+    <!-- hamburger — mobile only -->
+    <button id="menu-toggle" class="md:hidden flex flex-col gap-1.5 p-1" aria-label="Toggle menu">
+      <span class="w-5 h-px bg-text block transition-all"></span>
+      <span class="w-5 h-px bg-text block transition-all"></span>
+      <span class="w-5 h-px bg-text block transition-all"></span>
+    </button>
+
+  </div>
+
+  <!-- mobile nav drawer -->
+  <div id="mobile-menu" class="hidden md:hidden border-t border-border bg-bg">
+    <nav class="flex flex-col px-6 py-4 gap-4 font-mono text-sm">
+      {{ range site.Menus.main }}
+      <a href="{{ .URL | relURL }}" class="text-muted hover:text-text transition-colors py-1">{{ .Name }}</a>
+      {{ end }}
+      {{ with site.Params.frequency }}
+      <span class="text-xs text-faint pt-2 border-t border-border">FREQ <b class="text-signal font-medium">{{ . }}</b></span>
+      {{ end }}
+    </nav>
   </div>
 </header>
+
+<script>
+  (function () {
+    const toggle = document.getElementById("menu-toggle");
+    const menu = document.getElementById("mobile-menu");
+    const bars = toggle.querySelectorAll("span");
+
+    toggle.addEventListener("click", () => {
+      const open = menu.classList.toggle("hidden");
+      // animate to X when open
+      if (!open) {
+        bars[0].style.transform = "translateY(6px) rotate(45deg)";
+        bars[1].style.opacity = "0";
+        bars[2].style.transform = "translateY(-6px) rotate(-45deg)";
+      } else {
+        bars[0].style.transform = "";
+        bars[1].style.opacity = "";
+        bars[2].style.transform = "";
+      }
+    });
+
+    // close menu on nav link click
+    menu.querySelectorAll("a").forEach(a => {
+      a.addEventListener("click", () => {
+        menu.classList.add("hidden");
+        bars[0].style.transform = "";
+        bars[1].style.opacity = "";
+        bars[2].style.transform = "";
+      });
+    });
+  })();
+</script>

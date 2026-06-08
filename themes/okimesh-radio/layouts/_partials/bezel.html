@@ -1,14 +1,11 @@
-<aside
-  class="fixed top-0 left-0 h-screen w-rail bg-bg-2 border-r border-border z-40 flex flex-col items-center justify-between py-4 shrink-0"
-  aria-hidden="true">
-
-  <span class="w-2 h-2 rounded-full bg-signal shadow-[0_0_8px_var(--color-signal)]" title="online"></span>
+<aside class="hidden md:flex fixed top-0 left-0 h-screen w-[54px] bg-bg-2 border-r border-border z-40 flex-col items-center justify-between py-4 shrink-0" aria-hidden="true">
+  <span class="w-2 h-2 rounded-full bg-signal" title="online"></span>
   <div class="[writing-mode:vertical-rl] rotate-180 font-mono text-[0.7rem] tracking-[0.42em] uppercase text-faint">
     {{ site.Title }} <b class="text-signal font-semibold">// MESH ONLINE</b>
   </div>
-  <div class="flex flex-col gap-1.75 items-center">
+  <div class="flex flex-col gap-[7px] items-center">
     {{ range seq 16 }}
-    <i class="w-3.5 h-px bg-border block not-italic nth-[5n+1]:w-5.5 nth-[5n+1]:bg-faint"></i>
+    <i class="w-3.5 h-px bg-border block not-italic [&:nth-child(5n+1)]:w-[22px] [&:nth-child(5n+1)]:bg-faint"></i>
     {{ end }}
   </div>
 </aside>

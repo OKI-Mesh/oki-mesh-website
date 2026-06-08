@@ -1,8 +1,0 @@
-<!-- Open Graph -->
-<meta property="og:title" content="{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }}{{ end }}" />
-<meta property="og:description"
-    content="{{ with .Description }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="{{ .Permalink }}" />
-{{ with site.Params.ogImage }}
-<meta property="og:image" content="{{ . | absURL }}" />{{ end }}
