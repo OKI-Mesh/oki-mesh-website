@@ -1,0 +1,556 @@
+{
+  "nodes": [
+    {
+      "pubkey": "a1b2c3d4e5f6",
+      "name": "W8OKI-Repeater",
+      "role": "repeater",
+      "neighbor_count": 11
+    },
+    {
+      "pubkey": "b2c3d4e5f6a1",
+      "name": "KB8ZGL-Home",
+      "role": "client",
+      "neighbor_count": 4
+    },
+    {
+      "pubkey": "c3d4e5f6a1b2",
+      "name": "WA8YXZ-Mobile",
+      "role": "client",
+      "neighbor_count": 2
+    },
+    {
+      "pubkey": "d4e5f6a1b2c3",
+      "name": "N8QRT-Roof",
+      "role": "repeater",
+      "neighbor_count": 9
+    },
+    {
+      "pubkey": "e5f6a1b2c3d4",
+      "name": "KD8MNP-Base",
+      "role": "client",
+      "neighbor_count": 3
+    },
+    {
+      "pubkey": "f6a1b2c3d4e5",
+      "name": "W8CIN-Room",
+      "role": "room",
+      "neighbor_count": 7
+    },
+    {
+      "pubkey": "a1c3e5b2d4f6",
+      "name": "KE8TRV-Solar",
+      "role": "repeater",
+      "neighbor_count": 8
+    },
+    {
+      "pubkey": "b2d4f6a1c3e5",
+      "name": "N8DAY-Tower",
+      "role": "repeater",
+      "neighbor_count": 12
+    },
+    {
+      "pubkey": "c3e5a1b2d4f6",
+      "name": "WD8LKS-Porch",
+      "role": "client",
+      "neighbor_count": 2
+    },
+    {
+      "pubkey": "d4f6b2c3e5a1",
+      "name": "KA8VNT-Car",
+      "role": "client",
+      "neighbor_count": 1
+    },
+    {
+      "pubkey": "e5a1c3d4f6b2",
+      "name": "W8HAM-Attic",
+      "role": "repeater",
+      "neighbor_count": 6
+    },
+    {
+      "pubkey": "f6b2d4e5a1c3",
+      "name": "KG8OPQ-Deck",
+      "role": "client",
+      "neighbor_count": 3
+    },
+    {
+      "pubkey": "a2b3c4d5e6f7",
+      "name": "WB8RST-Node",
+      "role": "client",
+      "neighbor_count": 4
+    },
+    {
+      "pubkey": "b3c4d5e6f7a2",
+      "name": "KD8UVW-Shed",
+      "role": "repeater",
+      "neighbor_count": 7
+    },
+    {
+      "pubkey": "c4d5e6f7a2b3",
+      "name": "N8XYZ-Hilltop",
+      "role": "repeater",
+      "neighbor_count": 10
+    },
+    {
+      "pubkey": "d5e6f7a2b3c4",
+      "name": "WA8ABC-Office",
+      "role": "room",
+      "neighbor_count": 5
+    },
+    {
+      "pubkey": "e6f7a2b3c4d5",
+      "name": "K8DEF-Garage",
+      "role": "client",
+      "neighbor_count": 2
+    },
+    {
+      "pubkey": "f7a2b3c4d5e6",
+      "name": "KE8GHI-Rooftop",
+      "role": "repeater",
+      "neighbor_count": 9
+    },
+    {
+      "pubkey": "a3b4c5d6e7f8",
+      "name": "W8JKL-Silo",
+      "role": "repeater",
+      "neighbor_count": 6
+    },
+    {
+      "pubkey": "b4c5d6e7f8a3",
+      "name": "N8MNO-Valley",
+      "role": "client",
+      "neighbor_count": 3
+    },
+    {
+      "pubkey": "c5d6e7f8a3b4",
+      "name": "KA8PQR-Bridge",
+      "role": "repeater",
+      "neighbor_count": 8
+    },
+    {
+      "pubkey": "d6e7f8a3b4c5",
+      "name": "WD8STU-Barn",
+      "role": "client",
+      "neighbor_count": 1
+    },
+    {
+      "pubkey": "e7f8a3b4c5d6",
+      "name": "KB8VWX-Tower",
+      "role": "repeater",
+      "neighbor_count": 11
+    },
+    {
+      "pubkey": "f8a3b4c5d6e7",
+      "name": "KG8YZA-Mobile",
+      "role": "client",
+      "neighbor_count": 2
+    },
+    {
+      "pubkey": "a4b5c6d7e8f9",
+      "name": "W8BCD-Church",
+      "role": "room",
+      "neighbor_count": 6
+    },
+    {
+      "pubkey": "b5c6d7e8f9a4",
+      "name": "KD8EFG-Yard",
+      "role": "client",
+      "neighbor_count": 3
+    },
+    {
+      "pubkey": "c6d7e8f9a4b5",
+      "name": "N8HIJ-EMA",
+      "role": "repeater",
+      "neighbor_count": 10
+    },
+    {
+      "pubkey": "d7e8f9a4b5c6",
+      "name": "WA8KLM-Hilltop",
+      "role": "repeater",
+      "neighbor_count": 7
+    },
+    {
+      "pubkey": "e8f9a4b5c6d7",
+      "name": "KE8NOP-Cabin",
+      "role": "client",
+      "neighbor_count": 2
+    },
+    {
+      "pubkey": "f9a4b5c6d7e8",
+      "name": "W8QRS-Ridgeline",
+      "role": "repeater",
+      "neighbor_count": 9
+    },
+    {
+      "pubkey": "a5b6c7d8e9f0",
+      "name": "KB8TUV-Park",
+      "role": "room",
+      "neighbor_count": 4
+    },
+    {
+      "pubkey": "b6c7d8e9f0a5",
+      "name": "KA8WXY-Backpack",
+      "role": "client",
+      "neighbor_count": 1
+    },
+    {
+      "pubkey": "c7d8e9f0a5b6",
+      "name": "N8ZAB-Repeater",
+      "role": "repeater",
+      "neighbor_count": 8
+    },
+    {
+      "pubkey": "d8e9f0a5b6c7",
+      "name": "WD8CDE-Basement",
+      "role": "client",
+      "neighbor_count": 3
+    },
+    {
+      "pubkey": "e9f0a5b6c7d8",
+      "name": "KG8FGH-Rooftop",
+      "role": "repeater",
+      "neighbor_count": 6
+    },
+    {
+      "pubkey": "f0a5b6c7d8e9",
+      "name": "W8IJK-Volunteer",
+      "role": "room",
+      "neighbor_count": 5
+    },
+    {
+      "pubkey": "a6b7c8d9e0f1",
+      "name": "KD8LMN-Solar",
+      "role": "repeater",
+      "neighbor_count": 9
+    },
+    {
+      "pubkey": "b7c8d9e0f1a6",
+      "name": "N8OPQ-Fixed",
+      "role": "client",
+      "neighbor_count": 2
+    },
+    {
+      "pubkey": "c8d9e0f1a6b7",
+      "name": "WB8RSU-Trail",
+      "role": "client",
+      "neighbor_count": 1
+    },
+    {
+      "pubkey": "d9e0f1a6b7c8",
+      "name": "KE8VWX-Tower",
+      "role": "repeater",
+      "neighbor_count": 11
+    },
+    {
+      "pubkey": "e0f1a6b7c8d9",
+      "name": "W8YZA-Beacon",
+      "role": "repeater",
+      "neighbor_count": 7
+    },
+    {
+      "pubkey": "f1a6b7c8d9e0",
+      "name": "KA8BCD-House",
+      "role": "client",
+      "neighbor_count": 3
+    },
+    {
+      "pubkey": "a7b8c9d0e1f2",
+      "name": "KB8EFG-Repeater",
+      "role": "repeater",
+      "neighbor_count": 8
+    },
+    {
+      "pubkey": "b8c9d0e1f2a7",
+      "name": "N8HIK-Field",
+      "role": "client",
+      "neighbor_count": 2
+    },
+    {
+      "pubkey": "c9d0e1f2a7b8",
+      "name": "WA8LMN-Warehouse",
+      "role": "room",
+      "neighbor_count": 5
+    },
+    {
+      "pubkey": "d0e1f2a7b8c9",
+      "name": "KG8OPR-Mobile",
+      "role": "client",
+      "neighbor_count": 1
+    },
+    {
+      "pubkey": "e1f2a7b8c9d0",
+      "name": "W8STU-Ridge",
+      "role": "repeater",
+      "neighbor_count": 10
+    },
+    {
+      "pubkey": "f2a7b8c9d0e1",
+      "name": "KD8VWY-Garage",
+      "role": "client",
+      "neighbor_count": 2
+    },
+    {
+      "pubkey": "a8b9c0d1e2f3",
+      "name": "N8XZA-Crossroads",
+      "role": "repeater",
+      "neighbor_count": 6
+    },
+    {
+      "pubkey": "b9c0d1e2f3a8",
+      "name": "WD8BDE-Homestead",
+      "role": "client",
+      "neighbor_count": 3
+    }
+  ],
+  "edges": [
+    {
+      "source": "a1b2c3d4e5f6",
+      "target": "b2c3d4e5f6a1",
+      "score": 0.9
+    },
+    {
+      "source": "a1b2c3d4e5f6",
+      "target": "d4e5f6a1b2c3",
+      "score": 0.85
+    },
+    {
+      "source": "a1b2c3d4e5f6",
+      "target": "f6a1b2c3d4e5",
+      "score": 0.7
+    },
+    {
+      "source": "a1b2c3d4e5f6",
+      "target": "e5a1c3d4f6b2",
+      "score": 0.8
+    },
+    {
+      "source": "a1b2c3d4e5f6",
+      "target": "a1c3e5b2d4f6",
+      "score": 0.75
+    },
+    {
+      "source": "d4e5f6a1b2c3",
+      "target": "b2d4f6a1c3e5",
+      "score": 0.9
+    },
+    {
+      "source": "d4e5f6a1b2c3",
+      "target": "c4d5e6f7a2b3",
+      "score": 0.8
+    },
+    {
+      "source": "d4e5f6a1b2c3",
+      "target": "a1c3e5b2d4f6",
+      "score": 0.6
+    },
+    {
+      "source": "b2d4f6a1c3e5",
+      "target": "c3e5a1b2d4f6",
+      "score": 0.5
+    },
+    {
+      "source": "b2d4f6a1c3e5",
+      "target": "e5a1c3d4f6b2",
+      "score": 0.7
+    },
+    {
+      "source": "b2d4f6a1c3e5",
+      "target": "f6b2d4e5a1c3",
+      "score": 0.6
+    },
+    {
+      "source": "b2d4f6a1c3e5",
+      "target": "a2b3c4d5e6f7",
+      "score": 0.55
+    },
+    {
+      "source": "c4d5e6f7a2b3",
+      "target": "f7a2b3c4d5e6",
+      "score": 0.75
+    },
+    {
+      "source": "c4d5e6f7a2b3",
+      "target": "b3c4d5e6f7a2",
+      "score": 0.65
+    },
+    {
+      "source": "c4d5e6f7a2b3",
+      "target": "e7f8a3b4c5d6",
+      "score": 0.88
+    },
+    {
+      "source": "f7a2b3c4d5e6",
+      "target": "a3b4c5d6e7f8",
+      "score": 0.7
+    },
+    {
+      "source": "f7a2b3c4d5e6",
+      "target": "e7f8a3b4c5d6",
+      "score": 0.85
+    },
+    {
+      "source": "f7a2b3c4d5e6",
+      "target": "c5d6e7f8a3b4",
+      "score": 0.6
+    },
+    {
+      "source": "e7f8a3b4c5d6",
+      "target": "c6d7e8f9a4b5",
+      "score": 0.9
+    },
+    {
+      "source": "e7f8a3b4c5d6",
+      "target": "f9a4b5c6d7e8",
+      "score": 0.8
+    },
+    {
+      "source": "c6d7e8f9a4b5",
+      "target": "c7d8e9f0a5b6",
+      "score": 0.88
+    },
+    {
+      "source": "c6d7e8f9a4b5",
+      "target": "d7e8f9a4b5c6",
+      "score": 0.7
+    },
+    {
+      "source": "c6d7e8f9a4b5",
+      "target": "f9a4b5c6d7e8",
+      "score": 0.75
+    },
+    {
+      "source": "c6d7e8f9a4b5",
+      "target": "e8f9a4b5c6d7",
+      "score": 0.5
+    },
+    {
+      "source": "f9a4b5c6d7e8",
+      "target": "a5b6c7d8e9f0",
+      "score": 0.6
+    },
+    {
+      "source": "f9a4b5c6d7e8",
+      "target": "e9f0a5b6c7d8",
+      "score": 0.7
+    },
+    {
+      "source": "c7d8e9f0a5b6",
+      "target": "e9f0a5b6c7d8",
+      "score": 0.85
+    },
+    {
+      "source": "c7d8e9f0a5b6",
+      "target": "d8e9f0a5b6c7",
+      "score": 0.5
+    },
+    {
+      "source": "e9f0a5b6c7d8",
+      "target": "a6b7c8d9e0f1",
+      "score": 0.9
+    },
+    {
+      "source": "e9f0a5b6c7d8",
+      "target": "f0a5b6c7d8e9",
+      "score": 0.7
+    },
+    {
+      "source": "a6b7c8d9e0f1",
+      "target": "d9e0f1a6b7c8",
+      "score": 0.85
+    },
+    {
+      "source": "a6b7c8d9e0f1",
+      "target": "e0f1a6b7c8d9",
+      "score": 0.75
+    },
+    {
+      "source": "a6b7c8d9e0f1",
+      "target": "b7c8d9e0f1a6",
+      "score": 0.55
+    },
+    {
+      "source": "d9e0f1a6b7c8",
+      "target": "e0f1a6b7c8d9",
+      "score": 0.8
+    },
+    {
+      "source": "d9e0f1a6b7c8",
+      "target": "a7b8c9d0e1f2",
+      "score": 0.7
+    },
+    {
+      "source": "e0f1a6b7c8d9",
+      "target": "e1f2a7b8c9d0",
+      "score": 0.85
+    },
+    {
+      "source": "e1f2a7b8c9d0",
+      "target": "a8b9c0d1e2f3",
+      "score": 0.75
+    },
+    {
+      "source": "e1f2a7b8c9d0",
+      "target": "f2a7b8c9d0e1",
+      "score": 0.5
+    },
+    {
+      "source": "a7b8c9d0e1f2",
+      "target": "b8c9d0e1f2a7",
+      "score": 0.6
+    },
+    {
+      "source": "a7b8c9d0e1f2",
+      "target": "c9d0e1f2a7b8",
+      "score": 0.7
+    },
+    {
+      "source": "a8b9c0d1e2f3",
+      "target": "b9c0d1e2f3a8",
+      "score": 0.6
+    },
+    {
+      "source": "a8b9c0d1e2f3",
+      "target": "d0e1f2a7b8c9",
+      "score": 0.5
+    },
+    {
+      "source": "a5b6c7d8e9f0",
+      "target": "b6c7d8e9f0a5",
+      "score": 0.4
+    },
+    {
+      "source": "f6a1b2c3d4e5",
+      "target": "d5e6f7a2b3c4",
+      "score": 0.65
+    },
+    {
+      "source": "f6a1b2c3d4e5",
+      "target": "f0a5b6c7d8e9",
+      "score": 0.7
+    },
+    {
+      "source": "a1c3e5b2d4f6",
+      "target": "f7a2b3c4d5e6",
+      "score": 0.8
+    },
+    {
+      "source": "a1c3e5b2d4f6",
+      "target": "c5d6e7f8a3b4",
+      "score": 0.6
+    },
+    {
+      "source": "e5a1c3d4f6b2",
+      "target": "f6b2d4e5a1c3",
+      "score": 0.55
+    },
+    {
+      "source": "d5e6f7a2b3c4",
+      "target": "e6f7a2b3c4d5",
+      "score": 0.5
+    },
+    {
+      "source": "c9d0e1f2a7b8",
+      "target": "d0e1f2a7b8c9",
+      "score": 0.6
+    }
+  ]
+}
