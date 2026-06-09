@@ -56,6 +56,9 @@ menus:
   - name: "Coverage"
     url: "/coverage/"
     weight: 30
+  - name: "Docs" 
+    url: "https://docs.okimesh.org/"
+    weight: 40
 
 markup:
   goldmark:
