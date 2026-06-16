@@ -16,13 +16,13 @@
 
       <div class="flex border border-border w-fit">
         {{ with .Get "primary" }}
-        <a href="{{ $.Get " primary_url" | default "#" }}"
+        <a href="{{ $.Get "primary_url" | default "#" }}"
           class="font-mono text-sm px-6 py-3 bg-signal text-on-signal font-semibold hover:bg-text transition-colors">
           {{ . }}
         </a>
         {{ end }}
         {{ with .Get "secondary" }}
-        <a href="{{ $.Get " secondary_url" | default "#" }}"
+        <a href="{{ $.Get "secondary_url" | default "#" }}"
           class="font-mono text-sm px-6 py-3 text-text hover:bg-surface hover:text-signal border-l border-border transition-colors">
           {{ . }}
         </a>
