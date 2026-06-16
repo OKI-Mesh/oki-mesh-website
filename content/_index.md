@@ -1,24 +1,6 @@
 ---
 title: "OKIMesh"
 description: "Off-grid LoRa mesh network for the OKI tri-state. Powered by MeshCore."
-
-what_eyebrow: "WHAT IS IT"
-what_title: "Infrastructure nobody owns."
-features:
-  - { key: "PWR", strong: "Off-grid.", text: "Runs through outages — no grid, cell, or internet." }
-  - { key: "SEC", strong: "Encrypted.", text: "DMs and channels secured end to end by default." }
-  - { key: "COST", strong: "Cheap.", text: "A capable node is well under $50 and sips battery." }
-  - { key: "OPEN", strong: "Community-run.", text: "Volunteer-owned and fully open. Coverage grows node by node." }
-
-cta:
-  title: "Put a node on the air."
-  body: "The fastest way in is the chat — ask questions, watch the live node map, and get help flashing your first radio. No experience needed."
-  primary:
-    label: "JOIN THE CHAT →"
-    url: "#"
-  secondary:
-    label: "EMAIL US"
-    url: "mailto:hello@example.org"
 ---
 
 {{< block id="mission" label="00 · MISSION" tag="DIRECTIVE" variant="directive" >}}
@@ -64,9 +46,7 @@ subscribe to.
   id="join"
   title="Put a node on the air."
   primary="JOIN THE CHAT →"
-  primary_url="https://discord.gg/your-invite"
-  secondary="EMAIL US"
-  secondary_url="mailto:hello@example.org"
+  primary_url="https://discord.okimesh.org"
 >}}
 The fastest way in is the chat — ask questions, watch the live node map, and get help
 flashing your first radio. No experience needed.

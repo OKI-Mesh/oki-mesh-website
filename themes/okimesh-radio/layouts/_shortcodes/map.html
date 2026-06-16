@@ -1,4 +1,19 @@
-<div class="w-full h-[70vh] min-h-120">
-    <iframe src="https://map.okimesh.org/#/live" class="w-full h-full border-0" allowfullscreen>
-    </iframe>
+{{ $type := .Get "type" | default "corescope" }}
+{{ $src := index .Site.Params.maps $type }}
+
+{{ if not $src }}
+  {{ errorf "map shortcode: unknown type %q — add it to params.maps in hugo.yaml" $type }}
+{{ end }}
+
+<div class="border border-border">
+  <div class="flex items-center justify-between px-3 py-2 bg-bg-2 border-b border-border font-mono text-xs">
+    <span class="text-faint">{{ $type | upper }}</span>
+    <a href="{{ $src }}" target="_blank" rel="noopener"
+       class="text-muted hover:text-signal transition-colors">
+      OPEN IN NEW WINDOW →
+    </a>
+  </div>
+  <div class="w-full h-[70vh] min-h-120">
+    <iframe src="{{ $src }}" class="w-full h-full border-0" allowfullscreen></iframe>
+  </div>
 </div>

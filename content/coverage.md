@@ -8,7 +8,7 @@ Coverage grows every week as members put up nodes. The map below shows current
 repeaters and known coverage across Greater Cincinnati, Dayton, and Northern
 Kentucky.
 
-{{< map >}}
+{{< map type="meshmapper">}}
 
 **Want to fill a gap?** High spots — water towers, ridgelines, tall rooftops —
 make the biggest difference. Reach out if you can host a repeater.

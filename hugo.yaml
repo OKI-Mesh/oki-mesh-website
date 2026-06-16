@@ -4,6 +4,9 @@ theme: "okimesh-radio"
 enableRobotsTXT: true
 
 params:
+  maps:
+    corescope: https://map.okimesh.org/#/live
+    meshmapper: https://swoh.meshmapper.net
   api_server: https://map.okimesh.org
   home:
     headline_pre: "A radio network the "
@@ -12,11 +15,14 @@ params:
     coordinates: "39.1055° N, 84.8201° W"
     lede: "OKIMesh is a volunteer-run <b>LoRa mesh</b> across the Southwest Ohio, Southeast Indiana, and Northern Kentucky — messaging that keeps working when the internet and cell network don't. No towers, no servers, no monthly bill."
     actions:
-      - label: "JOIN →"
+      - label: "GET STARTED →"
         url: "getting-started/"
         class: "go"
+      - label: "JOIN THE CHAT"
+        url: "https://discord.okimesh.org"
+        class: "alt"
       - label: "COVERAGE"
-        url: "https://map.okimesh.org/"
+        url: "coverage/"
         class: "alt"
     states:
       - name: "Ohio"
@@ -32,15 +38,12 @@ params:
   # ogImage: "img/social-card.jpg"   # drop a 1200x630 image in static/img/
   favicon: "images/favicon.png"
 
-  joinLabel: "Join the mesh"
-  joinURL: "getting-started/"
-
   # extraHeadLinks: []  # any extra stylesheet URLs
 
   # Footer community links (rendered in order)
   social:
     - name: "Discord"
-      url: "https://discord.gg/HAvyKm7yP"
+      url: "https://discord.okimesh.org"
     - name: "GitHub"
       url: "https://github.com/OKI-Mesh"
 
