@@ -67,3 +67,13 @@ markup:
   goldmark:
     renderer:
       unsafe: true
+
+security:
+  exec:
+    allow:
+      - '^(dart-)?sass$'
+      - '^go$'
+      - '^git$'
+      - '^node$'
+      - '^postcss$'
+      - '^tailwindcss$'
