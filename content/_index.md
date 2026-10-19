@@ -7,7 +7,7 @@ description: "Off-grid LoRa mesh network for the OKI tri-state. Powered by MeshC
 ## A community network the whole region carries.
 
 The OKI Mesh Alliance is a volunteer-built, **community-owned** communications network
-serving southwest Ohio, southeast Indiana, and northern Kentucky. Using low-power LoRa
+serving Indiana, Ohio, and Kentucky. Using low-power LoRa
 radio and the open MeshCore protocol, we run a resilient, decentralized mesh that
 operates independently of internet, cellular infrastructure, and centralized control.
 

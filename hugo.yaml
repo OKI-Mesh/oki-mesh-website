@@ -6,14 +6,14 @@ enableRobotsTXT: true
 params:
   maps:
     corescope: https://map.okimesh.org/#/live
-    meshmapper: https://swoh.meshmapper.net
+    meshmapper: https://meshmapper.okimesh.org
   api_server: https://map.okimesh.org
   home:
     headline_pre: "A radio network the "
     headline_accent: "whole region carries."
     band: "910.525 MHz"
     coordinates: "39.1055° N, 84.8201° W"
-    lede: "OKIMesh is a volunteer-run <b>LoRa mesh</b> across the Southwest Ohio, Southeast Indiana, and Northern Kentucky — messaging that keeps working when the internet and cell network don't. No towers, no servers, no monthly bill."
+    lede: "OKIMesh is a volunteer-run <b>LoRa mesh</b> across Indiana, Ohio, and Kentucky — messaging that keeps working when the internet and cell network don't. No towers, no servers, no monthly bill."
     actions:
       - label: "GET STARTED →"
         url: "getting-started/"
@@ -62,6 +62,9 @@ menus:
   - name: "Docs" 
     url: "https://docs.okimesh.org/"
     weight: 40
+  - name: "Partners"
+    weight: 50
+    url: "/partners/"
 
 markup:
   goldmark:

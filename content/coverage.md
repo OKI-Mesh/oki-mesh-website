@@ -5,8 +5,7 @@ description: "Current node and repeater coverage across the Tri-State."
 ---
 
 Coverage grows every week as members put up nodes. The map below shows current
-repeaters and known coverage across Greater Cincinnati, Dayton, and Northern
-Kentucky.
+repeaters and known coverage across Indiana, Ohio, and Kentucky.
 
 {{< map type="meshmapper">}}
 
